@@ -60,7 +60,7 @@ const ServicesSection = () => {
 
 const Services = styled(About)`
   h2 {
-    padding-left: 1rem;
+    padding: 1rem;
   }
   p {
     width: 70%;
