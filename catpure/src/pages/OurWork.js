@@ -13,8 +13,9 @@ const OurWork = () => {
       <Movie>
         <h2>The Athlete</h2>
         <div className="line">
-          <Link>
-          <img src={athlete} alt="athlete" />
+          <Link to="/work/the-athlete">
+            {/* Note: kode Js nya boya la naw {} daynaney */}
+            <img src={athlete} alt="athlete" />
           </Link>
         </div>
       </Movie>
@@ -22,8 +23,8 @@ const OurWork = () => {
       <Movie>
         <h2>The Racer</h2>
         <div className="line">
-          <Link>
-          <img src={theracer} alt="theracer" />
+          <Link to="/work/the-racer">
+            <img src={theracer} alt="theracer" />
           </Link>
         </div>
       </Movie>
@@ -31,8 +32,8 @@ const OurWork = () => {
       <Movie>
         <h2>Good Time</h2>
         <div className="line">
-          <Link>
-          <img src={goodtimes} alt="goodtimes" />
+          <Link to="/work/good-times">
+            <img src={goodtimes} alt="goodtimes" />
           </Link>
         </div>
       </Movie>
@@ -41,12 +42,12 @@ const OurWork = () => {
 };
 
 const Work = styled.div`
-min-height: 100vh;
-overflow: hidden;
-padding: 5rem 10rem;
-h2{
-  padding: 1rem 0rem;
-}
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 5rem 10rem;
+  h2 {
+    padding: 1rem 0rem;
+  }
 `;
 const Movie = styled.div`
   padding-bottom: 10rem;
@@ -54,7 +55,7 @@ const Movie = styled.div`
     height: 0.5rem;
     background: #cccccc;
     margin-bottom: 3rem;
-  } 
+  }
   img {
     width: 100%;
     height: 70vh;
