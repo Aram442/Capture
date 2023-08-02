@@ -11,12 +11,14 @@ export const About = styled.div`
 export const Description = styled.div`
   flex: 1;
   padding-right: 5rem;
+  z-index: 2; // bo wawy aw line bkaweta psht rasmy AboutUs 
   h2 {
     font-weight: lighter;
   }
 `;
 
 export const Image = styled.div`
+z-index: 2; // bo wawy aw line bkaweta psht rasmy AboutUs 
   flex: 1;
   overflow: hidden;
   img {
