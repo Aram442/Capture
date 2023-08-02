@@ -7,9 +7,19 @@ import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 
+//Animation
+import { motion } from "framer-motion"; //component nya boya la naw {} importy dakayn
+import { animation, pageAnimation } from "../animation";
+
 const OurWork = () => {
   return (
-    <Work>
+    <Work
+      style={{ background: "#fff" }}
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <Movie>
         <h2>The Athlete</h2>
         <div className="line">
@@ -41,7 +51,7 @@ const OurWork = () => {
   );
 };
 
-const Work = styled.div`
+const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;

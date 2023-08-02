@@ -14,10 +14,11 @@ function App() {
     <div className="App">
       <GolobalStyle />
       <Nav />
+
       <Routes>
         <Route path="/" exact element={<AboutUs />} />
         <Route path="/work" exact element={<OurWork />} />
-        <Route path="/work/:id" exact element={<MovieDetail/>}></Route>
+        <Route path="/work/:id" exact element={<MovieDetail />}></Route>
         <Route path="/contact" exact element={<ContactUs />} />
       </Routes>
     </div>

@@ -1,29 +1,31 @@
 import React from "react";
 import home1 from "../img/home1.png";
-//Styled
-import styled from "styled-components";
+// Framer Motion
+import { motion } from "framer-motion";
 import { About, Description, Image, Hide } from "../styles";
 
 const AboutSection = () => {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div
+          
+        >
           <Hide>
-            <h2>we work to make</h2>
+            <motion.h2>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2>true.</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have. we
-          have professionals with amazing skills{" "}
+          have professionals with amazing skills
         </p>
         <button>Contact Us</button>
       </Description>
@@ -33,7 +35,5 @@ const AboutSection = () => {
     </About>
   );
 };
-
-// Styled Components
 
 export default AboutSection;

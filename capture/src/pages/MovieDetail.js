@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import Styled, { createGlobalStyle, styled } from "styled-components";
 import { MovieState } from "../MovieState";
 import { useLocation } from "react-router-dom";
+//Animation
+import { motion } from "framer-motion"; //component nya boya la naw {} importy dakayn
+import { animation, pageAnimation } from "../animation";
 
 const MovieDetail = () => {
   let { pathname } = useLocation();
@@ -22,7 +25,12 @@ const MovieDetail = () => {
   return (
     <>
       {movie && (
-        <Detail>
+        <Detail
+          exit="exit"
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+        >
           <HeadLine>
             <h2>{movie[0]?.title}</h2>
             <img src={movie[0]?.mainImg} alt="movie" />
@@ -45,7 +53,7 @@ const MovieDetail = () => {
   );
 };
 
-const Detail = Styled.div`
+const Detail = Styled(motion.div)`
     color: white;
 `;
 const HeadLine = Styled.div`
@@ -90,16 +98,12 @@ const AwardStyle = styled.div`
 `;
 
 const ImageDisplay = styled.div`
-min-height: 50vh;
-img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
-
-
-
+  min-height: 50vh;
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
 `;
 // Award Coponent
 const Award = ({ title, description, key }) => {
