@@ -1,5 +1,7 @@
 import styled from "styled-components";
-export const About = styled.div`
+import { motion } from "framer-motion";
+
+export const About = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -11,14 +13,14 @@ export const About = styled.div`
 export const Description = styled.div`
   flex: 1;
   padding-right: 5rem;
-  z-index: 2; // bo wawy aw line bkaweta psht rasmy AboutUs 
+  z-index: 2; // bo wawy aw line bkaweta psht rasmy AboutUs
   h2 {
     font-weight: lighter;
   }
 `;
 
 export const Image = styled.div`
-z-index: 2; // bo wawy aw line bkaweta psht rasmy AboutUs 
+  z-index: 2; // bo wawy aw line bkaweta psht rasmy AboutUs
   flex: 1;
   overflow: hidden;
   img {

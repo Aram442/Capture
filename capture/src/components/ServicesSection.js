@@ -10,49 +10,48 @@ import home2 from "../img/home2.png";
 import { About, Description, Image } from "../styles";
 import { styled } from "styled-components";
 
+import { fade } from "../animation";
+
 const ServicesSection = () => {
   return (
     <Services>
       <Description>
         <h2>
-          High <span>quality</span>services.
+          High <span>quality</span> services
         </h2>
         <Cards>
           <Card>
             <div className="icon">
-              <img src={clock} alt="clock icon" />
-              <h2>Efficient</h2>
+              <img alt="icon" src={clock} />
+              <h3>Efficient</h3>
             </div>
-            <p>Lorem ipsum dolar sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
-
           <Card>
             <div className="icon">
-              <img src={teamwork} alt="clock icon" />
-              <h2>Teamwork</h2>
+              <img alt="icon" src={teamwork} />
+              <h3>Teamwork</h3>
             </div>
-            <p>Lorem ipsum dolar sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
-
           <Card>
             <div className="icon">
-              <img src={diaphragm} alt="clock icon" />
-              <h2>Diaphragm</h2>
+              <img alt="icon" src={diaphragm} />
+              <h3>Diaphragm</h3>
             </div>
-            <p>Lorem ipsum dolar sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
-
           <Card>
             <div className="icon">
-              <img src={money} alt="clock icon" />
-              <h2>Affordable</h2>
+              <img alt="icon" src={money} />
+              <h3>Affordable</h3>
             </div>
-            <p>Lorem ipsum dolar sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
         </Cards>
       </Description>
       <Image>
-        <img src={home2} alt="Camera" />
+        <img alt="camera" src={home2} />
       </Image>
     </Services>
   );
@@ -79,12 +78,11 @@ const Card = styled.div`
     display: flex;
     align-items: center;
     h3 {
-    margin-left: 1rem;
-    background: white;
-    color: black;
-    padding: 1rem;
+      margin-left: 1rem;
+      background: white;
+      color: black;
+      padding: 1rem;
+    }
   }
-  }
-  
 `;
 export default ServicesSection;
